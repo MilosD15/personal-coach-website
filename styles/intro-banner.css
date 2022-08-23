@@ -25,12 +25,14 @@ section.intro-banner > div {
 .intro-banner-text h1 {
     font-size: var(--hero-main-text-font-size);
     color: var(--hero-main-text-color);
+    font-weight: 900;
 }
 
 .intro-banner-text p {
     color: var(--hero-secondary-text-color);
     font-size: var(--hero-secondary-text-font-size);
     font-weight: var(--light-font-weight);
+    line-height: 1.3;
 }
 
 .intro-banner-text a:link,
