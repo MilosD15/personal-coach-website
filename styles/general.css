@@ -1,6 +1,6 @@
 
 /* IMPORTING ROBOTO FONT */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
 /* REMOVING DEFAULT STYLINGS */
 *,
@@ -30,6 +30,11 @@
     --quote-section-text-color: var(--dark-background-blue-color);
     --extra-bold-font-weight: 700;
     --light-font-weight: 300;
+
+    /* BREAKPOINTS */
+    --LARGE-SCREENS-BREAKPOINT: 81.25rem; /* 1300pz */
+    --MEDIUM-SCREENS-BREAKPOINT: 56.25rem; /* 900px */
+    --SMALL-SCREENS-BREAKPOINT: 31.25rem; /* 500px */
 
     /* OTHERS */
     --sections-max-width: 100rem; /* 1600px */
