@@ -1,0 +1,21 @@
+
+/* FOOTER STYLING */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-background-blue-color);
+}
+
+footer ::selection {
+    color: var(--dark-background-blue-color);
+    background-color: var(--hero-main-text-color);
+}
+
+footer > section.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--hero-main-text-color);
+    font-weight: 400;
+}

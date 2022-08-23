@@ -6,6 +6,11 @@ section.services {
     background-color: transparent;
 }
 
+section.services ::selection {
+    background-color: var(--dark-background-blue-color);
+    color: var(--hero-main-text-color);
+}
+
 section.services > div {
     display: flex;
     flex-direction: column;
@@ -16,18 +21,27 @@ section.services > div {
 section.services > div > h2 {
     color: var(--dark-background-blue-color);
     font-size: var(--services-section-title-font-size);
-    padding: 3rem 0;
+    padding: 4rem 0;
     font-weight: 900;
 }
 
 .services-container {
     display: flex;
     gap: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .service {
     width: 12.5rem; /* 300px */
+}
+
+.service:hover .image {
+    border-radius: 6.25rem; /* 100px */
+    background-color: var(--button-blue-bg-color);
+}
+
+.service:hover .text {
+    transform: scale(1.2);
 }
 
 .service:nth-child(2) .image img {
@@ -43,6 +57,7 @@ section.services > div > h2 {
     font-weight: 400;
     padding: .5rem;
     text-align: center;
+    transition: transform 400ms ease;
 }
 
 .service .image {

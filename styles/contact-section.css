@@ -1,0 +1,52 @@
+
+/* CONTACT SECTION ON THE HOMEPAGE STYLING */
+section.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--hero-main-text-color);
+}
+
+section.contact ::selection {
+    color: var(--button-blue-bg-color);
+    background-color: var(--hero-secondary-text-color);
+}
+
+section.contact > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+}
+
+section.contact .wrapper {
+    background-color: var(--button-blue-bg-color);
+    padding: 2.5rem 6rem;
+    border-radius: 0.625rem; /* 30px */
+    display: flex;
+    gap: 3rem;
+}
+
+section.contact .contact-text {
+    color: var(--hero-main-text-color);
+}
+
+section.contact .contact-text h3 {
+    font-size: var(--hero-secondary-text-font-size);
+}
+
+section.contact .contact-text p {
+    font-weight: 300;
+    margin-top: .2rem;
+}
+
+section.contact a:link,
+section.contact a:visited {
+    background-color: var(--button-blue-bg-color);
+    color: var(--button-blue-bg-color);
+    border: 2px solid var(--hero-main-text-color);
+}
+
+section.contact a::after {
+    border: 2px solid var(--hero-main-text-color);
+}

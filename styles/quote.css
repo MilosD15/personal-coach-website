@@ -1,0 +1,38 @@
+
+/* QUOTE SECTION STYLING */
+section.quote {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--hero-secondary-text-color);
+}
+
+section.quote ::selection {
+    color: var(--hero-secondary-text-color);
+    background-color: var(--dark-background-blue-color);
+}
+
+section.quote > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+}
+
+section.quote figure {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.quote blockquote {
+    font-size: var(--services-section-title-font-size);
+    color: var(--dark-background-blue-color);
+    font-weight: 300;
+}
+
+section.quote figcaption {
+    font-size: var(--hero-secondary-text-font-size);
+    align-self: flex-end;
+}

@@ -12,6 +12,11 @@
     outline: none;
 }
 
+/* selecting images disabled */
+img {
+    user-select: none;
+}
+
 /* VARIABLES */
 :root {
     /* UTILITIES */
@@ -28,8 +33,6 @@
     --quote-section-bg-color: var(--hero-secondary-text-color);
     --quote-section-font-size: var(--services-section-title-font-size);
     --quote-section-text-color: var(--dark-background-blue-color);
-    --extra-bold-font-weight: 700;
-    --light-font-weight: 300;
 
     /* BREAKPOINTS */
     --LARGE-SCREENS-BREAKPOINT: 81.25rem; /* 1300pz */
@@ -73,4 +76,53 @@ body {
 .line-below-text:hover::after,
 .line-below-text:active::after {
     right: 0;
+}
+
+/* common stylings for contact me buttons on a page */
+a[data-text="Contact me"]:link,
+a[data-text="Contact me"]:visited {
+    width: max-content;
+    font-weight: 400;
+    padding: .8rem 1.6rem;
+    border-radius: 0.625rem; /* 10px */
+    text-decoration: none;
+    position: relative;
+}
+
+a[data-text="Contact me"]::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: -2px;
+    background-color: var(--button-blue-bg-color);
+    color: var(--hero-main-text-color);
+    font-weight: 400;
+    padding: .8rem 1.6rem;
+    border-radius: 0.625rem; /* 6px */
+    transform: translate(0.375rem, 0.375rem);
+    transition: transform 400ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a[data-text="Contact me"]:hover::after,
+a[data-text="Contact me"]:focus::after,
+a[data-text="Contact me"]:active::after {
+    transform: translate(0, 0);
+}
+
+/* custom scrollbar styling */
+::-webkit-scrollbar {
+    width: .7rem;
+    background-color: var(--dark-background-blue-color);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+    background-color: var(--dark-background-blue-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--button-blue-bg-color);
+    border-radius: 0.625rem; /* 10px */
 }
