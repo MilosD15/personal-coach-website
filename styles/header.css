@@ -51,17 +51,93 @@ a.logo:active .logo-name::after {
 }
 
 /* NAVBAR STYLING */
-nav {
+nav.large-screens {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-nav a {
+nav.large-screens a:link, 
+nav.large-screens a:visited {
     text-decoration: none;
     font-size: var(--hero-secondary-text-font-size);
     color: var(--hero-secondary-text-color);
     position: relative;
     padding: 0.3rem 0.6rem;
     font-weight: 400;
+}
+
+nav.small-screens {
+    display: none;
+    align-items: center;
+    position: relative;
+}
+
+nav.small-screens .menu-icon {
+    background-color: var(--dark-background-blue-color);
+    border: 0;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    transition: transform 400ms ease;
+}
+
+nav.small-screens .menu-icon svg {
+    width: 80%;
+    height: 80%;
+    stroke: var(--hero-main-text-color);
+}
+
+nav.small-screens .menu-icon:hover {
+    transform: rotate(6deg) scale(1.1);
+}
+
+nav.small-screens .menu-icon:focus ~ .links {
+    /* this can be potential issue if we would want to
+    in future add more links, we will have to manually set
+    the height of the .links container */
+    height: 14.375rem; /* 230px */
+}
+
+nav.small-screens .links {
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    right: -2rem;
+    background-color: var(--dark-background-blue-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    transition: height 400ms ease;
+}
+
+nav.small-screens .links a:link,
+nav.small-screens .links a:visited {
+    text-decoration: none;
+    font-size: var(--hero-secondary-text-font-size);
+    color: var(--hero-secondary-text-color);
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    font-weight: 400;
+    margin: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 56.25rem) {
+    nav.large-screens {
+        display: none;
+    }
+    nav.small-screens {
+        display: flex;
+    }
+}
+
+@media (max-width: 31.25rem) {
+    header > div {
+        padding: 0 .5rem;
+    }
+    nav.small-screens .links {
+        right: -.5rem;
+    }
 }
