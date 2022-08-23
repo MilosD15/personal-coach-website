@@ -1,0 +1,72 @@
+
+/* IMPORTING ROBOTO FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap');
+
+/* REMOVING DEFAULT STYLINGS */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* VARIABLES */
+:root {
+    /* UTILITIES */
+    --dark-background-blue-color: #1f2937;
+    --hero-main-text-font-size: 3rem; /* 48px */
+    --hero-main-text-color: #f9faf8;
+    --hero-secondary-text-font-size: 1.125rem; /* 18px */
+    --hero-secondary-text-color: #e5e7eb;
+    --header-link-text-color: var(--hero-secondary-text-color);
+    --header-logo-text-font-size: 1.5rem; /* 24px */
+    --button-blue-bg-color: #3882f6;
+    --services-section-title-font-size: 2.25rem; /* 36px */
+    --services-section-title-text-color: var(--dark-background-blue-color);
+    --quote-section-bg-color: var(--hero-secondary-text-color);
+    --quote-section-font-size: var(--services-section-title-font-size);
+    --quote-section-text-color: var(--dark-background-blue-color);
+    --extra-bold-font-weight: 700;
+    --light-font-weight: 300;
+
+    /* OTHERS */
+    --sections-max-width: 100rem; /* 1600px */
+}
+
+/* GENERAL PAGE STYLING */
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* fixed size of each section on a page */
+/* this keeps content centered even on the giant screen sizes */
+.fixed-sections-width {
+    width: min(100%, var(--sections-max-width));
+}
+
+/* utility class that will provide line animation in hover, focus, or active state */
+.line-below-text::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    background-color: currentColor;
+    transition: right 400ms ease;
+}
+
+.line-below-text:focus::after,
+.line-below-text:hover::after,
+.line-below-text:active::after {
+    right: 0;
+}
