@@ -1,0 +1,65 @@
+
+/* STYLINGS RELATED TO MAIN CONTENT ON CONTACT PAGE */
+section.make-contact {
+    background-color: var(--dark-background-blue-color);
+}
+
+section.make-contact > div {
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+}
+
+section.make-contact > div > div:nth-child(1) {
+    font-size: var(--hero-main-text-font-size);
+    color: var(--hero-main-text-color);
+    font-weight: 400;
+    transform: translateY(-1rem);
+    opacity: 0;
+    animation: fade-in 500ms ease 1100ms forwards;
+}
+
+section.make-contact > div > div:nth-child(2) {
+    font-size: var(--hero-main-text-font-size);
+    color: var(--button-blue-bg-color);
+    margin-top: 2rem;
+    font-weight: 700;
+    transform: translateY(-1rem);
+    opacity: 0;
+    animation: fade-in 500ms ease 1400ms forwards;
+}
+
+section.make-contact .arrow svg {
+    width: 10rem; /* 160px */
+    height: 10rem; /* 160px */
+    stroke: var(--hero-main-text-color);
+    stroke-width: 1;
+    margin-top: 3rem;
+    transform: translateY(-1rem);
+    opacity: 0;
+    animation: fade-in 500ms ease 1900ms forwards;
+}
+
+@media (max-width: 56.25rem) {
+    section.make-contact > div > div:nth-child(1),
+    section.make-contact > div > div:nth-child(2) {
+        font-size: var(--services-section-title-font-size);
+    }
+    section.make-contact .arrow svg {
+        width: 8.75rem; /* 140px */
+        height: 8.75rem; /* 140px */
+    }
+}
+
+@media (max-width: 31.25rem) {
+    section.make-contact > div {
+        padding: 4rem 2rem 3rem;
+    }
+    section.make-contact > div > div:nth-child(1),
+    section.make-contact > div > div:nth-child(2) {
+        font-size: var(--header-logo-text-font-size);
+    }
+    section.make-contact .arrow svg {
+        width: 7.5rem; /* 160px */
+        height: 7.5rem; /* 160px */
+    }
+}

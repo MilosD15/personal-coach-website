@@ -27,11 +27,7 @@ section.testimonials > div > h2 {
     font-weight: 900;
     transform: translateY(1rem);
     opacity: 0;
-    animation-name: fade-in;
-    animation-duration: 500ms;
-    animation-delay: 2400ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    animation: fade-in 500ms ease 2400ms forwards;
 }
 
 .services-container,
@@ -45,10 +41,7 @@ section.testimonials > div > h2 {
 .testimonial {
     transform: translateY(1rem);
     opacity: 0;
-    animation-name: fade-in;
-    animation-duration: 500ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    animation: fade-in 500ms ease 0ms forwards;
 }
 
 .service:nth-child(1),

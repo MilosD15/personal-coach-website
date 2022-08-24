@@ -26,11 +26,7 @@ a.logo:visited {
     gap: .5rem;
     align-items: center;
     transform: translateY(-5rem);
-    animation-name: slide-in;
-    animation-duration: 500ms;
-    animation-delay: 300ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    animation: slide-in 500ms ease 300ms forwards;
 }
 
 .logo-img {
@@ -62,11 +58,7 @@ nav.large-screens {
     align-items: center;
     gap: 1rem;
     transform: translateY(-5rem);
-    animation-name: slide-in;
-    animation-duration: 500ms;
-    animation-delay: 700ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    animation: slide-in 500ms ease 700ms forwards;
 }
 
 nav.large-screens a:link, 
@@ -84,11 +76,7 @@ nav.small-screens {
     align-items: center;
     position: relative;
     transform: translateY(-5rem);
-    animation-name: slide-in;
-    animation-duration: 500ms;
-    animation-delay: 700ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+    animation: slide-in 500ms ease 700ms forwards;
 }
 
 nav.small-screens .menu-icon {

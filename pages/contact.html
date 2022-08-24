@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
     <header>
@@ -44,7 +45,46 @@
         </div>
     </header>
     <main>
-        
+        <section class="make-contact">
+            <div class="fixed-sections-width">
+                <div>You are so close to making your best decision this day.</div>
+                <div><em><strong>Ping me!</strong></em></div>
+                <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-down" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="16" y1="15" x2="12" y2="19" />
+                        <line x1="8" y1="15" x2="12" y2="19" />
+                      </svg>
+                </div>
+            </div>
+        </section>
+        <section class="contact-form">
+            <div class="fixed-sections-width">
+                <form>
+                    <div class="input-field">
+                        <input type="text" id="first-name-input" placeholder="First name">
+                        <label for="first-name-input">First name:</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="last-name-input" placeholder="Last name">
+                        <label for="last-name-input">Last name:</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="email-input" placeholder="Email">
+                        <label for="email-input">Email:</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="email-title-input" placeholder="Email title">
+                        <label for="email-title-input">Email title:</label>
+                    </div>
+                    <div class="textarea-field">
+                        <label for="message-textarea">Message or question:</label>
+                        <textarea id="message-textarea"></textarea>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="copyright fixed-sections-width">
