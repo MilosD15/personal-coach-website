@@ -36,3 +36,24 @@ section.quote figcaption {
     font-size: var(--hero-secondary-text-font-size);
     align-self: flex-end;
 }
+
+@media (max-width: 81.25rem) {
+    section.quote figure {
+        width: 85%;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    section.quote blockquote {
+        font-size: var(--header-logo-text-font-size);
+    }
+    section.quote figcaption {
+        font-size: 1rem;
+    }
+    section.quote > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+    }
+}

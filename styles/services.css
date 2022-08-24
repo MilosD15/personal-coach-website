@@ -32,7 +32,7 @@ section.services > div > h2 {
 }
 
 .service {
-    width: 12.5rem; /* 300px */
+    width: 12.5rem; /* 200px */
 }
 
 .service:hover .image {
@@ -61,7 +61,7 @@ section.services > div > h2 {
 }
 
 .service .image {
-    width: 12.5rem; /* 300px */
+    width: 12.5rem; /* 200px */
     height: 12.5rem;
     display: flex;
     justify-content: center;
@@ -81,4 +81,66 @@ section.services > div > h2 {
 .service .image img {
     width: 65%;
     height: 65%;
+}
+
+@media (max-width: 81.25rem) {
+    .services-container {
+        gap: 3rem;
+    }
+    .service {
+        width: 9.375rem; /* 150px */
+    }
+    .service .image {
+        width: 9.375rem; /* 150px */
+        height: 9.375rem;
+        border-radius: 1.875rem; /* 30px */
+    }
+    .service .image:hover {
+        border-radius: 4.625rem; /* 74px */
+    }
+    .service .text {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    .services-container {
+        flex-wrap: wrap;
+    }
+    .service {
+        width: calc(50% - 1.5rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service .text {
+        width: 12.5rem; /* 200px */
+    }
+}
+
+@media (max-width: 31.25rem) {
+    section.services > div > h2 {
+        font-size: var(--header-logo-text-font-size);
+        padding: 3rem 0;
+    }
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 3rem;
+    }
+    .service {
+        width: 100%;
+    }
+    .service .image {
+        width: 7.5rem; /* 120px */
+        height: 7.5rem;
+        border-radius: 1.25rem; /* 20px */
+    }
+    .service .image:hover {
+        border-radius: 3.75rem; /* 60px */
+    }
+    .service .text {
+        width: 11.25rem; /* 180px */
+    }
 }
