@@ -50,3 +50,31 @@ section.contact a:visited {
 section.contact a::after {
     border: 2px solid var(--hero-main-text-color);
 }
+
+@media (max-width: 81.25rem) {
+    section.contact > div {
+        padding: 6rem 1rem;
+    }
+    section.contact .wrapper {
+        padding: 2.5rem 3rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    section.contact .wrapper {
+        flex-direction: column;
+    }
+    section.contact a {
+        align-self: center;
+    }
+}
+
+@media (max-width: 31.25rem) {
+    section.contact > div {
+        padding: 4rem 1rem;
+    }
+    section.contact .wrapper {
+        padding: 2rem;
+    }
+}

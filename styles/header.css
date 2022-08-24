@@ -97,10 +97,14 @@ nav.small-screens .menu-icon:focus ~ .links {
     in future add more links, we will have to manually set
     the height of the .links container */
     height: 14.375rem; /* 230px */
+    opacity: 1;
+    pointer-events: initial;
 }
 
 nav.small-screens .links {
     overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
     height: 0;
     position: absolute;
     top: 100%;
@@ -109,7 +113,9 @@ nav.small-screens .links {
     display: flex;
     flex-direction: column;
     padding: 1rem 3rem;
-    transition: height 400ms ease;
+    transition: 
+        height 400ms ease,
+        opacity 400ms ease;
 }
 
 nav.small-screens .links a:link,

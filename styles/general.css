@@ -49,6 +49,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 1rem;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
@@ -74,7 +75,8 @@ body {
 
 .line-below-text:focus::after,
 .line-below-text:hover::after,
-.line-below-text:active::after {
+.line-below-text:active::after,
+.line-below-text.active::after {
     right: 0;
 }
 
