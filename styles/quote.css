@@ -1,9 +1,6 @@
 
 /* QUOTE SECTION STYLING */
 section.quote {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     background-color: var(--hero-secondary-text-color);
 }
 

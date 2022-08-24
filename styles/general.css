@@ -55,6 +55,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* common declarations for each section */
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 /* fixed size of each section on a page */
 /* this keeps content centered even on the giant screen sizes */
 .fixed-sections-width {
@@ -82,7 +89,9 @@ body {
 
 /* common stylings for contact me buttons on a page */
 a[data-text="Contact me"]:link,
-a[data-text="Contact me"]:visited {
+a[data-text="Contact me"]:visited,
+a[data-text="About me"]:link,
+a[data-text="About me"]:visited {
     width: max-content;
     font-weight: 400;
     padding: .8rem 1.6rem;
@@ -91,7 +100,8 @@ a[data-text="Contact me"]:visited {
     position: relative;
 }
 
-a[data-text="Contact me"]::after {
+a[data-text="Contact me"]::after,
+a[data-text="About me"]::after {
     content: attr(data-text);
     position: absolute;
     inset: -2px;
@@ -109,7 +119,10 @@ a[data-text="Contact me"]::after {
 
 a[data-text="Contact me"]:hover::after,
 a[data-text="Contact me"]:focus::after,
-a[data-text="Contact me"]:active::after {
+a[data-text="Contact me"]:active::after,
+a[data-text="About me"]:hover::after,
+a[data-text="About me"]:focus::after,
+a[data-text="About me"]:active::after {
     transform: translate(0, 0);
 }
 
