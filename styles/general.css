@@ -39,6 +39,13 @@ img {
     --MEDIUM-SCREENS-BREAKPOINT: 56.25rem; /* 900px */
     --SMALL-SCREENS-BREAKPOINT: 31.25rem; /* 500px */
 
+    /* ANIMATIONS VARIABLES */
+    --initial-delay: 500ms;
+    --big-delay: 500ms;
+    --medium-delay: 400ms;
+    --little-delay: 300ms;
+    --animations-duration: 500ms;
+
     /* OTHERS */
     --sections-max-width: 100rem; /* 1600px */
 }
@@ -53,6 +60,7 @@ body {
     font-size: 1rem;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 /* common declarations for each section */
@@ -140,4 +148,18 @@ a[data-text="About me"]:active::after {
 ::-webkit-scrollbar-thumb {
     background-color: var(--button-blue-bg-color);
     border-radius: 0.625rem; /* 10px */
+}
+
+/* ANIMATIONS */
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

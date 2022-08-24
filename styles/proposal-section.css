@@ -60,6 +60,7 @@ section.proposal a::after {
     border: 2px solid var(--hero-main-text-color);
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 81.25rem) {
     section.proposal > div {
         padding: 6rem 1rem;

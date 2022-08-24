@@ -20,6 +20,7 @@ footer > section.copyright {
     font-weight: 400;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 31.25rem) {
     footer > section.copyright {
         flex-direction: column;

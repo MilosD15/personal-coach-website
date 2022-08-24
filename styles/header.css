@@ -25,6 +25,12 @@ a.logo:visited {
     display: flex;
     gap: .5rem;
     align-items: center;
+    transform: translateY(-5rem);
+    animation-name: slide-in;
+    animation-duration: 500ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .logo-img {
@@ -55,6 +61,12 @@ nav.large-screens {
     display: flex;
     align-items: center;
     gap: 1rem;
+    transform: translateY(-5rem);
+    animation-name: slide-in;
+    animation-duration: 500ms;
+    animation-delay: 700ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 nav.large-screens a:link, 
@@ -71,6 +83,12 @@ nav.small-screens {
     display: none;
     align-items: center;
     position: relative;
+    transform: translateY(-5rem);
+    animation-name: slide-in;
+    animation-duration: 500ms;
+    animation-delay: 700ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 nav.small-screens .menu-icon {
@@ -130,6 +148,7 @@ nav.small-screens .links a:visited {
     text-align: center;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 56.25rem) {
     nav.large-screens {
         display: none;

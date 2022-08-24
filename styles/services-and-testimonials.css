@@ -25,6 +25,13 @@ section.testimonials > div > h2 {
     font-size: var(--services-section-title-font-size);
     padding: 4rem 0;
     font-weight: 900;
+    transform: translateY(1rem);
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 500ms;
+    animation-delay: 2400ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .services-container,
@@ -32,6 +39,36 @@ section.testimonials > div > h2 {
     display: flex;
     gap: 3rem;
     padding-bottom: 4rem;
+}
+
+.service,
+.testimonial {
+    transform: translateY(1rem);
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.service:nth-child(1),
+.testimonial:nth-child(1) {
+    animation-delay: 2600ms;
+}
+
+.service:nth-child(2),
+.testimonial:nth-child(2) {
+    animation-delay: 2800ms;
+}
+
+.service:nth-child(3),
+.testimonial:nth-child(3) {
+    animation-delay: 3000ms;
+}
+
+.service:nth-child(4),
+.testimonial:nth-child(4) {
+    animation-delay: 3200ms;
 }
 
 .service {
@@ -127,6 +164,7 @@ section.testimonials > div > h2 {
     height: auto;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 81.25rem) {
     .testimonials-container {
         gap: 1rem;

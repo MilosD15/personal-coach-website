@@ -34,6 +34,7 @@ section.quote figcaption {
     align-self: flex-end;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 81.25rem) {
     section.quote figure {
         width: 85%;
