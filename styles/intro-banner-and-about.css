@@ -60,7 +60,7 @@ section.about > div {
     background-color: var(--dark-background-blue-color);
     color: var(--dark-background-blue-color);
     font-size: var(--hero-secondary-text-font-size);
-    border: 2px solid var(--button-blue-bg-color);
+    border: 0.125rem solid var(--button-blue-bg-color);
     transform: translateX(-50rem);
     opacity: 0;
     animation: fade-in 500ms ease 1700ms forwards;

@@ -53,11 +53,11 @@ section.proposal a:link,
 section.proposal a:visited {
     background-color: var(--button-blue-bg-color);
     color: var(--button-blue-bg-color);
-    border: 2px solid var(--hero-main-text-color);
+    border: 0.125rem solid var(--hero-main-text-color);
 }
 
 section.proposal a::after {
-    border: 2px solid var(--hero-main-text-color);
+    border: 0.125rem solid var(--hero-main-text-color);
 }
 
 /* MEDIA QUERIES */

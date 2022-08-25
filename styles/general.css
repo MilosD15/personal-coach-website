@@ -54,6 +54,7 @@ body {
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    background-color: var(--hero-main-text-color);
 }
 
 /* common declarations for each section */
@@ -73,7 +74,7 @@ section {
 .line-below-text::after {
     content: '';
     position: absolute;
-    height: 2px;
+    height: 0.125rem; /* 2px */
     bottom: 0;
     left: 0;
     right: 100%;
@@ -92,7 +93,8 @@ section {
 a[data-text="Contact me"]:link,
 a[data-text="Contact me"]:visited,
 a[data-text="About me"]:link,
-a[data-text="About me"]:visited {
+a[data-text="About me"]:visited,
+button[aria-label="Submit form button"] {
     width: max-content;
     font-weight: 400;
     padding: .8rem 1.6rem;
@@ -102,10 +104,11 @@ a[data-text="About me"]:visited {
 }
 
 a[data-text="Contact me"]::after,
-a[data-text="About me"]::after {
+a[data-text="About me"]::after,
+button[aria-label="Submit form button"]::after {
     content: attr(data-text);
     position: absolute;
-    inset: -2px;
+    inset: -0.125rem;
     background-color: var(--button-blue-bg-color);
     color: var(--hero-main-text-color);
     font-weight: 400;
@@ -123,7 +126,9 @@ a[data-text="Contact me"]:focus::after,
 a[data-text="Contact me"]:active::after,
 a[data-text="About me"]:hover::after,
 a[data-text="About me"]:focus::after,
-a[data-text="About me"]:active::after {
+a[data-text="About me"]:active::after,
+button[aria-label="Submit form button"]:hover::after,
+button[aria-label="Submit form button"]:focus::after {
     transform: translate(0, 0);
 }
 
@@ -134,7 +139,8 @@ a[data-text="About me"]:active::after {
 }
 
 ::-webkit-scrollbar-track,
-::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
     background-color: var(--dark-background-blue-color);
 }
 

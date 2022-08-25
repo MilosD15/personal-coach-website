@@ -1,7 +1,13 @@
 
 /* STYLINGS RELATED TO MAIN CONTENT ON CONTACT PAGE */
+/* MAKE-CONTACT SECTION */
 section.make-contact {
     background-color: var(--dark-background-blue-color);
+}
+
+section.make-contact ::selection {
+    color: var(--dark-background-blue-color);
+    background-color: var(--hero-main-text-color);
 }
 
 section.make-contact > div {
@@ -9,16 +15,16 @@ section.make-contact > div {
     padding: 5rem 2rem 4rem;
 }
 
-section.make-contact > div > div:nth-child(1) {
+section.make-contact > div > h1:nth-child(1) {
     font-size: var(--hero-main-text-font-size);
     color: var(--hero-main-text-color);
-    font-weight: 400;
+    font-weight: 700;
     transform: translateY(-1rem);
     opacity: 0;
     animation: fade-in 500ms ease 1100ms forwards;
 }
 
-section.make-contact > div > div:nth-child(2) {
+section.make-contact > div > h1:nth-child(2) {
     font-size: var(--hero-main-text-font-size);
     color: var(--button-blue-bg-color);
     margin-top: 2rem;
@@ -39,14 +45,207 @@ section.make-contact .arrow svg {
     animation: fade-in 500ms ease 1900ms forwards;
 }
 
+/* CONTACT FORM */
+section.contact-form {
+    background-color: var(--hero-secondary-text-color);
+}
+
+section.contact-form ::selection {
+    color: var(--hero-secondary-text-color);
+    background-color: var(--dark-background-blue-color);
+}
+
+section.contact-form > div {
+    padding: 2rem 6rem;
+    display: flex;
+}
+
+section.contact-form form {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.contact-form form > * {
+    animation: fade-in 500ms ease 1900ms forwards;
+}
+
+section.contact-form form > *:nth-child(1) {
+    transform: translateX(-200%);
+    opacity: 0;
+    animation-delay: 2200ms;
+}
+
+section.contact-form form > *:nth-child(2) {
+    transform: translateX(200%);
+    opacity: 0;
+    animation-delay: 2500ms;
+}
+
+section.contact-form form > *:nth-child(3) {
+    transform: translateX(-200%);
+    opacity: 0;
+    animation-delay: 2800ms;
+}
+
+section.contact-form form > *:nth-child(4) {
+    transform: translateX(200%);
+    opacity: 0;
+    animation-delay: 3100ms;
+}
+
+section.contact-form form > *:nth-child(5) {
+    transform: translateX(-200%);
+    opacity: 0;
+    animation-delay: 3400ms;
+}
+
+section.contact-form form > *:nth-child(6) {
+    transform: translateY(2rem);
+    opacity: 0;
+    animation-delay: 3900ms;
+}
+
+section.contact-form .input-field,
+section.contact-form .textarea-field {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+section.contact-form .input-field {
+    flex-basis: 50%;
+}
+
+section.contact-form .textarea-field {
+    flex-basis: 100%;
+}
+
+section.contact-form .input-field input,
+section.contact-form .textarea-field textarea {
+    border: 0;
+    padding: .5rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    border-bottom: 0.125rem solid var(--dark-background-blue-color);
+    font-size: var(--hero-secondary-text-font-size);
+    color: var(--dark-background-blue-color);
+    transition: color 400ms ease;
+}
+
+section.contact-form .textarea-field textarea {
+    height: 10rem;
+    resize: none;
+}
+
+section.contact-form .textarea-field textarea::-webkit-scrollbar {
+    background-color: var(--hero-secondary-text-color);
+}
+
+section.contact-form .textarea-field textarea::-webkit-scrollbar-track,
+section.contact-form .textarea-field textarea::-webkit-scrollbar-track-piece,
+section.contact-form .textarea-field textarea::-webkit-scrollbar-corner {
+    background-color: var(--hero-secondary-text-color);
+}
+
+section.contact-form .textarea-field textarea::-webkit-scrollbar-thumb {
+    background-color: var(--dark-background-blue-color);
+    transition: background-color 400ms ease;
+}
+
+section.contact-form .textarea-field textarea:focus::-webkit-scrollbar-thumb {
+    background-color: var(--button-blue-bg-color);
+}
+
+section.contact-form .input-field label,
+section.contact-form .textarea-field label {
+    font-size: var(--hero-secondary-text-font-size);
+    font-weight: 400;
+    transition: 
+        color 400ms ease,
+        transform 400ms ease;
+}
+
+section.contact-form .input-field input ~ .line-below,
+section.contact-form .textarea-field textarea ~ .line-below {
+    position: absolute;
+    height: 0.125rem;
+    right: 100%;
+    left: 2rem;
+    background-color: var(--button-blue-bg-color);
+    transition: right 400ms ease;
+}
+
+section.contact-form .input-field input:focus,
+section.contact-form .textarea-field textarea:focus {
+    color: var(--button-blue-bg-color);
+}
+
+section.contact-form .input-field input:focus ~ .line-below,
+section.contact-form .textarea-field textarea:focus ~ .line-below {
+    right: 2rem;
+}
+
+section.contact-form .input-field input:focus ~ label,
+section.contact-form .textarea-field textarea:focus ~ label {
+    color: var(--button-blue-bg-color);
+    transform: scale(1.1) translateX(2rem);
+}
+
+section.contact-form .textarea-field textarea:focus ~ label {
+    transform: scale(1.1) translateX(4rem);
+}
+
+section.contact-form form > button {
+    border: 0.125rem solid var(--button-blue-bg-color);
+    background-color: var(--hero-secondary-text-color);
+    color: var(--hero-secondary-text-color);
+    font-size: var(--hero-secondary-text-font-size);
+    margin: 1rem 2rem;
+    cursor: pointer;
+}
+
+section.contact-form form > button::after {
+    font-size: var(--hero-secondary-text-font-size);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 81.25rem) {
+    section.contact-form > div {
+        padding: 2rem;
+    }
+    section.contact-form .input-field input:focus ~ label,
+    section.contact-form .textarea-field textarea:focus ~ label {
+        transform: scale(1.1) translateX(1rem);
+    }
+    section.contact-form .textarea-field textarea:focus ~ label {
+        transform: scale(1.1) translateX(2rem);
+    }
+}
+
 @media (max-width: 56.25rem) {
-    section.make-contact > div > div:nth-child(1),
-    section.make-contact > div > div:nth-child(2) {
+    section.make-contact > div > h1:nth-child(1),
+    section.make-contact > div > h1:nth-child(2) {
         font-size: var(--services-section-title-font-size);
     }
     section.make-contact .arrow svg {
         width: 8.75rem; /* 140px */
         height: 8.75rem; /* 140px */
+    }
+    section.contact-form .input-field {
+        flex-basis: 100%;
+    }
+    section.contact-form .input-field,
+    section.contact-form .textarea-field {
+        padding: 1.5rem 2rem;
+    }
+    section.contact-form .textarea-field textarea:focus ~ label {
+        transform: scale(1.1) translateX(1rem);
+    }
+    section.contact-form form {
+        justify-content: center;
     }
 }
 
@@ -54,12 +253,24 @@ section.make-contact .arrow svg {
     section.make-contact > div {
         padding: 4rem 2rem 3rem;
     }
-    section.make-contact > div > div:nth-child(1),
-    section.make-contact > div > div:nth-child(2) {
+    section.make-contact > div > h1:nth-child(1),
+    section.make-contact > div > h1:nth-child(2) {
         font-size: var(--header-logo-text-font-size);
     }
     section.make-contact .arrow svg {
         width: 7.5rem; /* 160px */
         height: 7.5rem; /* 160px */
+    }
+    section.contact-form .input-field input,
+    section.contact-form .textarea-field textarea,
+    section.contact-form .input-field label,
+    section.contact-form .textarea-field label,
+    section.contact-form form > button,
+    section.contact-form form > button::after {
+        font-size: 1rem;
+    }
+    section.contact-form .input-field,
+    section.contact-form .textarea-field {
+        padding: 1.5rem 0;
     }
 }
