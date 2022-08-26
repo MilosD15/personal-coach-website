@@ -241,8 +241,9 @@ section.contact-form form > button::after {
     section.contact-form .textarea-field {
         padding: 1.5rem 2rem;
     }
+    section.contact-form .input-field input:focus ~ label,
     section.contact-form .textarea-field textarea:focus ~ label {
-        transform: scale(1.1) translateX(1rem);
+        transform: scale(1.1) translateX(1.5rem);
     }
     section.contact-form form {
         justify-content: center;
@@ -272,5 +273,17 @@ section.contact-form form > button::after {
     section.contact-form .input-field,
     section.contact-form .textarea-field {
         padding: 1.5rem 0;
+    }
+    section.contact-form .input-field input:focus ~ label,
+    section.contact-form .textarea-field textarea:focus ~ label {
+        transform: scale(1.1) translateX(1rem);
+    }
+    section.contact-form .input-field input ~ .line-below,
+    section.contact-form .textarea-field textarea ~ .line-below {
+        left: 0;
+    }
+    section.contact-form .input-field input:focus ~ .line-below,
+    section.contact-form .textarea-field textarea:focus ~ .line-below {
+        right: 0;
     }
 }
